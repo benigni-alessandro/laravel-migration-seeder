@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTravelsTable extends Migration
+class CreateTravelTable extends Migration
 {
     /**
      * Run the migrations.
@@ -23,7 +23,7 @@ class CreateTravelsTable extends Migration
             $table->tinyInteger('persons')->default(1);
             $table->date('date_in');
             $table->date('date_out');
-            $table->float('price', 8, 2)->default(0);
+            $table->integer('price');
             $table->timestamps();
         });
     }

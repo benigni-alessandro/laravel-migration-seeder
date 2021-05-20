@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 use App\Travel;
 
-class TravelsTableSeeder extends Seeder
+class TravelSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -23,8 +23,8 @@ class TravelsTableSeeder extends Seeder
         $new_travel->persons = $faker->randomDigit();
         $new_travel->date_in = $faker->dateTime();
         $new_travel->date_out = $faker->dateTime();
-        $new_travel->price = $faker->randomFloat();
+        $new_travel->price = $faker->randomNumber(5);
         $new_travel->save();
-      }
     }
+  }
 }
